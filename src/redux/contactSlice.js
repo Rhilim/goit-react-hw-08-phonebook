@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { logOut } from 'redux/auth/operations';
 import {
   fetchContacts,
   addContact,
@@ -15,7 +16,7 @@ const contactSlice = createSlice({
   },
   reducers: {
     deleteAllContactsUI: state => {
-     state.items = [] ;
+      state.items = [];
     },
   },
   extraReducers: builder => {
@@ -48,12 +49,17 @@ const contactSlice = createSlice({
         state.error = action.payload;
       })
       .addCase(deleteAllContacts.fulfilled, state => {
-        return state.items = [];
+        return (state.items = []);
+      })
+      .addCase(logOut.fulfilled, state => {
+        state.items = [];
+        state.error = null;
+        state.isLoading = false;
       });
   },
 });
 
 export const contactReducer = contactSlice.reducer;
 export const getContacts = state => state.contacts.items;
-export const { deleteAllContactsUI } =
-  contactSlice.actions;
+export const selectLoading = state => state.contacts.isLoading;
+export const { deleteAllContactsUI } = contactSlice.actions;
