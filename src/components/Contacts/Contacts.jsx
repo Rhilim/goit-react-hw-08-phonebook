@@ -45,7 +45,7 @@ export const Contacts = () => {
         <StyledList>
           {filteredContacts.map(el => (
             <StyledListItem key={el.id}>
-              {el.name}: {el.phone}
+              {el.name}: {el.number}
               <StyledDeleteBtn onClick={() => dispatch(handleDelete(el.id))}>
                 delete
               </StyledDeleteBtn>

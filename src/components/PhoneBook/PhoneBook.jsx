@@ -42,7 +42,7 @@ export const PhoneBook = () => {
       <Formik
         initialValues={{
           name: '',
-          phone: '',
+          number: '',
         }}
         onSubmit={(values, actions) => {
           handleAddContact(values);
@@ -68,7 +68,7 @@ export const PhoneBook = () => {
             <StyledLabel> Number </StyledLabel>
             <StyledField
               type="tel"
-              name="phone"
+              name="number"
               placeholder="123456789"
               pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
