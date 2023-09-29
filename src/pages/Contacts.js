@@ -22,8 +22,8 @@ export default function Tasks() {
       <Helmet>
         <title>Your Phonebook</title>
       </Helmet>
+      <StyledTitle>Phonebook</StyledTitle>
       <Wrapper>
-        <StyledTitle>Phonebook</StyledTitle>
         <PhoneBook />
         <div>{isLoading && 'Request in progress...'}</div>
         <Filter />

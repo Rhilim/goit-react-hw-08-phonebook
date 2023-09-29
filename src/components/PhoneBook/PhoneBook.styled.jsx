@@ -3,23 +3,26 @@ import { Form, Field, ErrorMessage } from 'formik';
 
 export const StyledTitle = styled.h1`
   margin-left: 10px;
+  text-align: left;
+  font-family: Roboto;
 `;
 export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
+  
   gap: 15px;
   padding: 10px;
 `;
 
 export const StyledField = styled(Field)`
   padding: 4px;
-  width: 250px;
-  height: 30px;
+  width: 200px;
+  height: 20px;
   border-radius: 4px;
   border: none;
-  background-color: #fff;
+  background-color: #C0C0C0;
   ::placeholder{
-    color: grey;
+    color: #2a363b;
     font-size: 1.2em;
   }
 `;
@@ -69,4 +72,15 @@ export const Wrapper = styled.div`
 export const StyledLabel = styled.label`
   font-size: 1.2em;
   font-weight: bold;
+ color: #2a363b;
+`;
+
+
+export const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
 `;
