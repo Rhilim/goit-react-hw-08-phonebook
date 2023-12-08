@@ -1,9 +1,3 @@
-// import { Toaster } from 'react-hot-toast';
-// import { Contacts } from './Contacts/Contacts';
-// import { Filter } from './Filter/Filter';
-// import { PhoneBook } from './PhoneBook/PhoneBook';
-// import { StyledTitle } from './PhoneBook/PhoneBook.styled';
-// import { Wrapper } from './Wrapper';
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
